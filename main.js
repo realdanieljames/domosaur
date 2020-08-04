@@ -19,6 +19,7 @@ paragraph.style.backgroundColor = 'green'
 //  Hide the second dinosaur's image so that it's no longer visible
 //      and so that the area below it moves up to take the space
 const secondDinosaurImage = document.querySelector('img:first-child')
+secondDinosaurImage.style.disply = 'none'
 
 
 
@@ -71,9 +72,14 @@ const blueBackground = function () {
 
     dinoRow.style.backgroundColor = 'blue'
     //toggle
+    if (dinoRow.style.backgroundColor === 'black'){
+        dinoRow.style.backgroundColor = 'white';
+    } else {
+        dinoRow.style.backgroundColor = 'black'
+    }
 }
 
-button.addEventListener('click', blueBackground)
+button.addEventListener('click', blueBackground)n
 
 
 
@@ -88,6 +94,7 @@ const bigUpDino = function () {
 }
 
 biggifyDino.addEventListener('mouseenter', bigUpDino )
+biggifyDino.addEventListener('mouseleave', bigUpDino )
 
 
 //  STRETCH GOALS
